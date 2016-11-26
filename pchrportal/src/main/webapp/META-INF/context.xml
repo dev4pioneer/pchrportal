@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/foo" >
+
+  <Resource name="jdbc/pcdbjndi" 
+  	auth="Container"
+	type="javax.sql.DataSource" 
+	maxActive="100" 
+	maxIdle="20" 
+	minIdle="5"
+	maxWait="10000" 
+	username="root" 
+	password="root" 
+	driverClassName="com.mysql.jdbc.Driver"
+	url="jdbc:mysql://localhost:3306/pc_hr_portal" />
+
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+	<WatchedResource>META-INF/context.xml</WatchedResource>
+
+</Context>
