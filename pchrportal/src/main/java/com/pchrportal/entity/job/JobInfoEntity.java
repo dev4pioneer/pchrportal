@@ -34,13 +34,11 @@ public class JobInfoEntity {
 	private String logo;
 	private String location;
 	private String postedDate;
+	private String closedDate;
 	
-
 	@ElementCollection
 	@CollectionTable(name="SKILLS_MST_TBL",  joinColumns=@JoinColumn(name="ID"))		
 	private List<String> skills;
-	
-
 	
 	public List<String> getSkills() {
 		return skills;
@@ -119,13 +117,23 @@ public class JobInfoEntity {
 		this.location = location;
 	}
 
-	@Column(name = "LOCATION")
+	@Column(name = "POSTED_DATE")
 	public String getPostedDate() {
 		return postedDate;
 	}
 
 	public void setPostedDate(String postedDate) {
 		this.postedDate = postedDate;
+	}
+	
+	@Column(name = "CLOSED_DATE")
+	public String getClosedDate() {
+		return closedDate;
+	}
+
+
+	public void setClosedDate(String closedDate) {
+		this.closedDate = closedDate;
 	}
 
 }
